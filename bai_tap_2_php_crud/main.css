@@ -16,15 +16,11 @@ a:hover{
     padding: 10px;
     border-radius: 15px;
     transition: background-color 0.3s, color 0.3s;
+    font-size: 25px;
   }
   
   .menu h3 i.fa-solid.fa-chevron-down {
     transition: transform 0.3s;
-  }
-  
-  .menu h3:hover {
-    background-color: lightcoral; /* Màu nền cam nhạt khi hover */
-    color: white; /* Màu chữ trắng khi hover */
   }
   
   .menu h3[aria-expanded="true"] {
@@ -46,8 +42,13 @@ a:hover{
     border-radius: 15px;
     transition: background-color 0.3s;
   }
-  
-  .menu ul li:hover {
-    background-color: lightcoral; /* Màu nền cam nhạt khi hover trên các mục menu */
+  button{
+    border: none;
+    background-color: indianred;
+    color: white;
+    height: 40px;
+    border-radius:5px ;
   }
-  
+  .bt{
+    padding: 5px;
+  }

@@ -1,3 +1,13 @@
+<?php
+require_once 'data.php';        
+if(isset($_GET['submit'])){
+    $email=$_GET['email'];
+    $mobile=$_GET['mobile'];
+    $group=$_GET['group'];
+}
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +33,7 @@
                     <i class="fa-solid fa-chevron-down ml-2"></i>
                 </h3>
                 <ul class="collapse" id="menu1">
-                    <li><a href="user.php">Users</a></li>
+                    <li><a href="#">Users</a></li>
                     <li><a href="#">Groups</a></li>
                     <li><a href="#">Permissions</a></li>
                 </ul>
@@ -86,6 +96,77 @@
                         <input type="text" class="form-control border-0" style="font-size: 1rem; outline: none;" placeholder="Search here...">
                     </div>
                 </form>
+            </div>
+            <div class="bg-white">
+                <h4 class="d-flex align-items-center justify-content-between">
+                    Filter
+                <i class="fa-solid fa-chevron-down ml-2 " style="color: indianred;" data-bs-toggle="collapse" href="#filterCollapse"></i>
+                </h4>
+                <div class="collapse" id="filterCollapse">
+                    <form action="filter.php" method="GET" style="background-color: white; border-radius: 15px;" class="d-flex align-items-center">
+                        <div class="input-group">
+                            <input type="text" name="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="input-group mx-2">
+                            <input type="text" name="mobile" class="form-control" placeholder="Mobile">
+                        </div>
+                        <div class="input-group mx-2">
+                            <select name="group" class="form-select">
+                                <option value="">Select Group</option>
+                                <option value="Manager">Manager</option>
+                                <option value="Staff">Staff</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary" name="submit">Filter</button>
+                    </form>
+                </div>
+            </div>
+            <div class="order-md-last bg-white">
+                <div class="d-flex justify-content-between align-items-center ">   
+                    <h4 class="color:indianred">User</h4>
+                    <div class="bt">
+                    <button>Delete</button>
+                    <button><a href="add_user.php">ADD User</a></button>
+                    </div>
+                </div>
+                <table class="table">
+               
+                    <thead>
+                    <thead>
+                        <tr>
+                        <th scope="col"><input type="checkbox" name="check" id=""></th>
+                        <th scope="col">Full name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Groups</th>
+                        <th scope="col">mobile</th>
+                        <th scope="col">Datet Of Birth</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                        <?php foreach ($data as $value): ?>
+                        <tr>
+                        <th scope="col"><input type="checkbox" name="check" id=""></th>
+                        <td scope="col"><?php echo $value['full_name']?></td>
+                        <td scope="col"><?php echo $value['email']?></td>
+                        <td scope="col"><?php echo $value['gender']?></td>
+                        <td scope="col"><?php echo $value['group']?></td>
+                        <td scope="col"><?php echo $value['mobile']?></td>
+                        <td scope="col"><?php echo $value['date_of_birth']?></td>
+                        
+                        <td scope="col"><i class="fa fa-circle text-success me-1"></i></td>
+                        <td p-1>
+                            <a href="" style="color: lightcoral;"><i class="fa fa-shield"></i></a>
+                            <a href=""style="color: lightcoral;"><i class="fa fa-pencil"></i></a>
+                            <a href=""style="color: lightcoral;"><i class="fa fa-trash"></i></a>
+                        </td>
+
+                        </tr>
+                        <?php endforeach; ?>
+                    </thead>
+                </table>
             </div>
         </div>
         <div class="col-md-1 bg-white">

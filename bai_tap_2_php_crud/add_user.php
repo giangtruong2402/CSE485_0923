@@ -23,7 +23,7 @@
                     <i class="fa-solid fa-chevron-down ml-2"></i>
                 </h3>
                 <ul class="collapse" id="menu1">
-                    <li><a href="user.php">Users</a></li>
+                    <li><a href="#">Users</a></li>
                     <li><a href="#">Groups</a></li>
                     <li><a href="#">Permissions</a></li>
                 </ul>
@@ -85,6 +85,76 @@
                         </a>
                         <input type="text" class="form-control border-0" style="font-size: 1rem; outline: none;" placeholder="Search here...">
                     </div>
+                </form>
+            </div>
+            <div class="class=bg-white">
+                <h1>Add User</h1>
+                <form action="process.php" method="POST">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username *</label>
+                        <input type="text" class="form-control" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number *</label>
+                        <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Role</label>
+                        <input type="text" class="form-control" id="role" name="role">
+                    </div>
+                    <div class="form-group">
+                        <label>Gender *</label>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="male" name="gender" value="Male" required>
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class="form-check">
+                            <input type="radio" class="form-check-input" id="female" name="gender" value="Female" required>
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of Birth *</label>
+                        <input type="date" class="form-control" id="dob" name="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="facebookUrl">Facebook Url</label>
+                        <input type="text" class="form-control" id="facebookUrl" name="facebookUrl">
+                    </div>
+                    <div class="form-group">
+                        <label for="twitterUrl">Twitter Url</label>
+                        <input type="text" class="form-control" id="twitterUrl" name="twitterUrl">
+                    </div>
+                    <div class="form-group">
+                        <label for="linkedinUrl">Linkedin Url</label>
+                        <input type="text" class="form-control" id="linkedinUrl" name="linkedinUrl">
+                    </div>
+                    <div class="form-group">
+                        <label for="about">About</label>
+                        <textarea class="form-control" id="about" name="about" rows="4"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password *</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password *</label>
+                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">Save</button>
+                    <button type="button" class="btn btn-warning">Cancel</button>
                 </form>
             </div>
         </div>
