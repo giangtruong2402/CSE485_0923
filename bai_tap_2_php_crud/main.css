@@ -52,3 +52,6 @@ a:hover{
   .bt{
     padding: 5px;
   }
+  span{
+    color: red;
+  }

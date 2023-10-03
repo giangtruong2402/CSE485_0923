@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Add user</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="stylesheet" href="fontawesome-free-6.4.0-web/js/all.min.js">
@@ -14,7 +14,7 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-2 bg-white ">
-            <img src="image/logo.png" alt="">
+            <a href="index.php"><img src="image/logo.png" alt=""></a>
             <div class="menu">
                 <h3 data-bs-toggle="collapse" href="#menu1" aria-expanded="false" class="d-flex align-items-center justify-content-between">
                    <div>
@@ -23,7 +23,7 @@
                     <i class="fa-solid fa-chevron-down ml-2"></i>
                 </h3>
                 <ul class="collapse" id="menu1">
-                    <li><a href="#">Users</a></li>
+                    <li><a href="user.php">Users</a></li>
                     <li><a href="#">Groups</a></li>
                     <li><a href="#">Permissions</a></li>
                 </ul>
@@ -99,15 +99,15 @@
                         <input type="text" class="form-control" id="lastName" name="lastName" required>
                     </div>
                     <div class="form-group">
-                        <label for="username">Username *</label>
+                        <label for="username">Username <span>*</span></label>
                         <input type="text" class="form-control" id="username" name="username" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email *</label>
+                        <label for="email">Email <span>*</span></label>
                         <input type="email" class="form-control" id="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="phoneNumber">Phone Number *</label>
+                        <label for="phoneNumber">Phone Number <span>*</span></label>
                         <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" required>
                     </div>
                     <div class="form-group">
@@ -115,7 +115,7 @@
                         <input type="text" class="form-control" id="role" name="role">
                     </div>
                     <div class="form-group">
-                        <label>Gender *</label>
+                        <label>Gender <span>*</span></label>
                         <div class="form-check">
                             <input type="radio" class="form-check-input" id="male" name="gender" value="Male" required>
                             <label class="form-check-label" for="male">Male</label>
@@ -126,7 +126,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="dob">Date of Birth *</label>
+                        <label for="dob">Date of Birth <span>*</span></label>
                         <input type="date" class="form-control" id="dob" name="dob" required>
                     </div>
                     <div class="form-group">
@@ -146,11 +146,11 @@
                         <textarea class="form-control" id="about" name="about" rows="4"></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="password">Password *</label>
+                        <label for="password">Password <span>*</span></label>
                         <input type="password" class="form-control" id="password" name="password" required>
                     </div>
                     <div class="form-group">
-                        <label for="confirmPassword">Confirm Password *</label>
+                        <label for="confirmPassword">Confirm Password <span>*</span></label>
                         <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
                     </div>
                     <button type="submit" class="btn btn-success">Save</button>

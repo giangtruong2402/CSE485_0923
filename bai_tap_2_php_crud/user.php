@@ -14,7 +14,7 @@ if(isset($_GET['submit'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="stylesheet" href="fontawesome-free-6.4.0-web/js/all.min.js">
@@ -24,7 +24,7 @@ if(isset($_GET['submit'])){
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-2 bg-white ">
-            <img src="image/logo.png" alt="">
+            <a href="index.php"><img src="image/logo.png" alt=""></a>
             <div class="menu">
                 <h3 data-bs-toggle="collapse" href="#menu1" aria-expanded="false" class="d-flex align-items-center justify-content-between">
                    <div>
